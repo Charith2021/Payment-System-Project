@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextOfMainForm" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <Label layoutX="231.0" layoutY="23.0" text="Login Page">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="134.0" text="User Name" />
+      <Label layoutX="110.0" layoutY="191.0" text="Password" />
+      <JFXTextField fx:id="txtUserName" layoutX="238.0" layoutY="116.0" prefHeight="26.0" prefWidth="188.0" />
+      <JFXButton layoutX="238.0" layoutY="255.0" onAction="#btnLoginOnAction" text="Login" />
+      <JFXPasswordField fx:id="txtPassword" layoutX="238.0" layoutY="186.0" prefHeight="26.0" prefWidth="188.0" />
+   </children>
+</AnchorPane>
