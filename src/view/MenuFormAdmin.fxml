@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="625.0" stylesheets="@../css/MenuFormRegularStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuFormRegularController">
+<AnchorPane fx:id="contextOfMenuFormAdmin" prefHeight="400.0" prefWidth="625.0" stylesheets="@../css/MenuFormRegularStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuFormAdminController">
    <children>
-      <AnchorPane fx:id="pneAddNewStudent" onKeyReleased="#pneAddNewStudent_OnKeyReleased" prefHeight="65.0" prefWidth="248.0" styleClass="menu">
+      <AnchorPane fx:id="pneAddNewStudent" onKeyReleased="#pneAddNewStudent_OnKeyReleased" onMouseClicked="#pneAddNewStudent_OnMouseClicked" prefHeight="65.0" prefWidth="248.0" styleClass="menu">
          <children>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -28,7 +28,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="pneSearchStudents" onKeyReleased="#pneSearchStudents_OnKeyReleased" prefHeight="65.0" prefWidth="248.0" styleClass="menu">
+      <AnchorPane fx:id="pneSearchStudents" onKeyReleased="#pneSearchStudents_OnKeyReleased" onMouseClicked="#pneSearchStudents_OnMouseClicked" prefHeight="65.0" prefWidth="248.0" styleClass="menu">
          <children>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -47,7 +47,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="pnePayment" onKeyReleased="#pnePayment_OnKeyReleased" prefHeight="65.0" prefWidth="248.0" styleClass="menu">
+      <AnchorPane fx:id="pnePayment" onKeyReleased="#pnePayment_OnKeyReleased" onMouseClicked="#pnePayment_OnMouseClicked" prefHeight="65.0" prefWidth="248.0" styleClass="menu">
          <children>
             <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
