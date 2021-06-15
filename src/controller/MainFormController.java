@@ -42,7 +42,7 @@ public class MainFormController {
             Parent root = FXMLLoader.load(this.getClass().getResource("/view/MenuFormRegular.fxml"));
             Scene regularScene=new Scene(root);
             stageRegular.setScene(regularScene);
-            stageRegular.setTitle("Payment System");
+            stageRegular.setTitle("Home");
 
         }
 

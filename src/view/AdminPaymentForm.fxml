@@ -45,5 +45,6 @@
       <Label layoutX="22.0" layoutY="541.0" text="Balance Amount" />
       <Label layoutX="6.0" layoutY="591.0" prefHeight="16.0" prefWidth="163.0" text="Due date of the balance amount" textOverrun="CLIP" />
       <JFXButton layoutX="243.0" layoutY="662.0" text="Print Receipt" />
+      <JFXButton fx:id="btnHome" layoutX="503.0" layoutY="26.0" text="Home" />
    </children>
 </AnchorPane>

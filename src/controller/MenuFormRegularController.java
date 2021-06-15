@@ -54,46 +54,40 @@ public class MenuFormRegularController {
 
     public void pneAddNewStudent_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
-            Stage stageAddNewStudent = (Stage) contextOfMenuFormRegular.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("/view/AddNewStudentForm.fxml"));
-            Scene addNewStudentScene=new Scene(root);
-            stageAddNewStudent.setScene(addNewStudentScene);
+            navigate("Add New Student","/view/AddNewStudentForm.fxml");
         }
     }
 
     public void pneAddNewStudent_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        Stage stageAddNewStudent = (Stage) contextOfMenuFormRegular.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/AddNewStudentForm.fxml"));
-        Scene addNewStudentScene=new Scene(root);
-        stageAddNewStudent.setScene(addNewStudentScene);
+        navigate("Add New Student","/view/AddNewStudentForm.fxml");
     }
 
     public void pneSearchStudents_OnKeyReleased(KeyEvent keyEvent) throws IOException {
-        Stage stageAddNewStudent = (Stage) contextOfMenuFormRegular.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/SearchStudentForm.fxml"));
-        Scene addNewStudentScene=new Scene(root);
-        stageAddNewStudent.setScene(addNewStudentScene);
+        if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
+            navigate("Search Student","/view/SearchStudentForm.fxml");
+        }
     }
 
     public void pneSearchStudents_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        Stage stageAddNewStudent = (Stage) contextOfMenuFormRegular.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/SearchStudentForm.fxml"));
-        Scene addNewStudentScene=new Scene(root);
-        stageAddNewStudent.setScene(addNewStudentScene);
+        navigate("Search Student","/view/SearchStudentForm.fxml");
     }
 
 
     public void pnePayment_OnKeyReleased(KeyEvent keyEvent) throws IOException {
-        Stage stageAddNewStudent = (Stage) contextOfMenuFormRegular.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/RegularPaymentForm.fxml"));
-        Scene addNewStudentScene=new Scene(root);
-        stageAddNewStudent.setScene(addNewStudentScene);
+        if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
+            navigate("Add Payment","/view/RegularPaymentForm.fxml");
+        }
     }
 
     public void pnePayment_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        Stage stageAddNewStudent = (Stage) contextOfMenuFormRegular.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/RegularPaymentForm.fxml"));
+        navigate("Add Payment","/view/RegularPaymentForm.fxml");
+    }
+
+    public  void navigate(String title,String url) throws IOException {
+        Stage stage = (Stage) contextOfMenuFormRegular.getScene().getWindow();
+        Parent root = FXMLLoader.load(this.getClass().getResource(url));
         Scene addNewStudentScene=new Scene(root);
-        stageAddNewStudent.setScene(addNewStudentScene);
+        stage.setScene(addNewStudentScene);
+        stage.setTitle(title);
     }
 }

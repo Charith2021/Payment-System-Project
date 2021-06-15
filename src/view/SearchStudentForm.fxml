@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="530.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchStudentForm">
+<AnchorPane fx:id="contextOfSearchStudent" prefHeight="530.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchStudentFormControl">
    <children>
       <Label layoutX="264.0" layoutY="25.0" text="Search Student">
          <font>
@@ -31,5 +31,6 @@
             <TableColumn minWidth="0.0" prefWidth="114.0" />
         </columns>
       </TableView>
+      <JFXButton fx:id="btnHome" layoutX="541.0" layoutY="26.0" onAction="#btnHome_OnAction" text="Home" />
    </children>
 </AnchorPane>

@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="530.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewStudentFormController">
+<AnchorPane fx:id="contextOfAddNewStudent" prefHeight="530.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewStudentFormController">
    <children>
       <Label layoutX="231.0" layoutY="21.0" text="Add New Student">
          <font>
@@ -33,5 +32,6 @@
          </children>
       </VBox>
       <JFXButton layoutX="254.0" layoutY="473.0" text="Add Student" />
+      <JFXButton fx:id="btnHome" layoutX="503.0" layoutY="37.0" onAction="#btnHome_OnAction" text="Home" />
    </children>
 </AnchorPane>
