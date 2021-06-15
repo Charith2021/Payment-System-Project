@@ -22,6 +22,7 @@ public class RegularPaymentFormController {
     public ChoiceBox cheID;
     public JFXButton btnHome;
     public AnchorPane contextOfRegularPaymentForm;
+
     ObservableList<String> olName=FXCollections.observableArrayList("Graduate Diploma in Software Engineering","CMJD","Direct Entry Program");
     ObservableList<String> olId=FXCollections.observableArrayList("GDSE","CMJD","DEP");
 

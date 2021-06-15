@@ -21,4 +21,5 @@ public class AddNewStudentFormController {
         homeStage.setScene(homeScene);
         homeStage.setTitle("Home");
     }
+
 }

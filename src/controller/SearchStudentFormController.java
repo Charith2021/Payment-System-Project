@@ -10,7 +10,7 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public class SearchStudentFormControl {
+public class SearchStudentFormController {
     public AnchorPane contextOfSearchStudent;
 
     public void btnHome_OnAction(ActionEvent actionEvent) throws IOException {

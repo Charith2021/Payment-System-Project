@@ -9,7 +9,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 import java.io.IOException;
 
@@ -54,22 +53,22 @@ public class MenuFormRegularController {
 
     public void pneAddNewStudent_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
-            navigate("Add New Student","/view/AddNewStudentForm.fxml");
+            navigate("Add New Student", "/view/AddNewStudentForm.fxml");
         }
     }
 
     public void pneAddNewStudent_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        navigate("Add New Student","/view/AddNewStudentForm.fxml");
+        navigate("Add New Student", "/view/AddNewStudentForm.fxml");
     }
 
     public void pneSearchStudents_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
-            navigate("Search Student","/view/SearchStudentForm.fxml");
+            navigate("Search Student", "/view/SearchStudentForm.fxml");
         }
     }
 
     public void pneSearchStudents_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        navigate("Search Student","/view/SearchStudentForm.fxml");
+        navigate("Search Student", "/view/SearchStudentForm.fxml");
     }
 
 
