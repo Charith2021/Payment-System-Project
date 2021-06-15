@@ -1,4 +1,4 @@
-********# Student Management System
+********# Student Payment System
 
 A simple Java FX Application to study and demonstrate many Java and SE related stuff.
 
