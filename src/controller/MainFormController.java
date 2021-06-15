@@ -7,12 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-
 import java.io.IOException;
 
 public class MainFormController {
@@ -20,7 +17,7 @@ public class MainFormController {
     public JFXPasswordField txtPassword;
     public AnchorPane contextOfMainForm;
 
-//dfsdf
+
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
 
         if(txtUserName.getText().trim().isEmpty() && txtPassword.getText().trim().isEmpty()){
@@ -35,6 +32,7 @@ public class MainFormController {
             Parent root = FXMLLoader.load(this.getClass().getResource("/view/MenuFormAdmin.fxml"));
             Scene adminScene=new Scene(root);
             stageAdmin.setScene(adminScene);
+            stageAdmin.setTitle("Payment System");
 
         }
 
@@ -44,6 +42,7 @@ public class MainFormController {
             Parent root = FXMLLoader.load(this.getClass().getResource("/view/MenuFormRegular.fxml"));
             Scene regularScene=new Scene(root);
             stageRegular.setScene(regularScene);
+            stageRegular.setTitle("Payment System");
 
         }
 
