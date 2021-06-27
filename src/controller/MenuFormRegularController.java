@@ -74,12 +74,12 @@ public class MenuFormRegularController {
 
     public void pnePayment_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
-            navigate("Add Payment","/view/RegularPaymentForm.fxml");
+            navigate("Add Payment", "/view/PaymentForm.fxml");
         }
     }
 
     public void pnePayment_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        navigate("Add Payment","/view/RegularPaymentForm.fxml");
+        navigate("Add Payment", "/view/PaymentForm.fxml");
     }
 
     public  void navigate(String title,String url) throws IOException {

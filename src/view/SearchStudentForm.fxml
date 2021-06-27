@@ -22,8 +22,8 @@
             <Image url="@../asset/Search%20Client.png" />
          </image>
       </ImageView>
-      <JFXTextField layoutX="55.0" layoutY="87.0" prefHeight="26.0" prefWidth="543.0" promptText="Search Student" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" />
-      <TableView layoutX="55.0" layoutY="172.0" prefHeight="351.0" prefWidth="578.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <JFXTextField fx:id="txtQuery" layoutX="55.0" layoutY="87.0" prefHeight="26.0" prefWidth="543.0" promptText="Search Student" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" />
+      <TableView fx:id="tblStudents" layoutX="55.0" layoutY="172.0" prefHeight="351.0" prefWidth="578.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
         <columns>
           <TableColumn prefWidth="137.0" text="NIC" />
           <TableColumn prefWidth="141.0" text="Name" />
@@ -32,5 +32,6 @@
         </columns>
       </TableView>
       <JFXButton fx:id="btnHome" layoutX="541.0" layoutY="26.0" onAction="#btnHome_OnAction" text="Home" />
+      <Label layoutX="55.0" layoutY="32.0" text="Regular User" />
    </children>
 </AnchorPane>

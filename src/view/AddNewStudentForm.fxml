@@ -23,15 +23,16 @@
       </ImageView>
       <VBox layoutX="72.0" layoutY="89.0" prefHeight="356.0" prefWidth="475.0" spacing="40.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.0">
          <children>
-            <JFXTextField prefHeight="26.0" prefWidth="485.0" promptText="NIC" />
-            <JFXTextField layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="485.0" promptText="Full Name" />
-            <JFXTextField layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="485.0" promptText="Address" />
-            <JFXTextField layoutX="10.0" layoutY="62.0" prefHeight="26.0" prefWidth="485.0" promptText="DOB" />
-            <JFXTextField layoutX="10.0" layoutY="88.0" prefHeight="26.0" prefWidth="485.0" promptText="Contact Number" />
-            <JFXTextField layoutX="10.0" layoutY="114.0" prefHeight="26.0" prefWidth="485.0" promptText="E-mail" />
+            <JFXTextField fx:id="txtNic" prefHeight="26.0" prefWidth="485.0" promptText="NIC" />
+            <JFXTextField fx:id="txtFullName" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="485.0" promptText="Full Name" />
+            <JFXTextField fx:id="txtAddress" layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="485.0" promptText="Address" />
+            <JFXTextField fx:id="txtDob" layoutX="10.0" layoutY="62.0" prefHeight="26.0" prefWidth="485.0" promptText="DOB" />
+            <JFXTextField fx:id="txtContact" layoutX="10.0" layoutY="88.0" prefHeight="26.0" prefWidth="485.0" promptText="Contact Number" />
+            <JFXTextField fx:id="txtMail" layoutX="10.0" layoutY="114.0" prefHeight="26.0" prefWidth="485.0" promptText="E-mail" />
          </children>
       </VBox>
-      <JFXButton layoutX="254.0" layoutY="473.0" text="Add Student" />
+      <JFXButton layoutX="254.0" layoutY="473.0" onAction="#btnAddStudent_OnAction" text="Add Student" />
       <JFXButton fx:id="btnHome" layoutX="503.0" layoutY="37.0" onAction="#btnHome_OnAction" text="Home" />
+      <Label fx:id="txtUserName" layoutX="36.0" layoutY="29.0" text="Regular User" />
    </children>
 </AnchorPane>

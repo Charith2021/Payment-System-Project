@@ -15,7 +15,7 @@ import javafx.stage.Window;
 import java.io.IOException;
 
 
-public class RegularPaymentFormController {
+public class PaymentFormController {
 
 
     public ChoiceBox cheCourse;

@@ -31,12 +31,21 @@ public class MenuFormAdminController {
     }
 
     public void rprAddNewStudent_OnKeyPressed(KeyEvent keyEvent) {
+        if(keyEvent.getCode()== KeyCode.ENTER||keyEvent.getCode()==KeyCode.SPACE) {
+            rprAddNewStudent.createManualRipple().run();
+        }
     }
 
     public void rprSearchStudents_OnKeyPressed(KeyEvent keyEvent) {
+            if(keyEvent.getCode()==KeyCode.ENTER||keyEvent.getCode()==KeyCode.SPACE) {
+                rprSearchStudents.createManualRipple().run();
+        }
     }
 
     public void rprPayment_OnKeyPressed(KeyEvent keyEvent) {
+        if(keyEvent.getCode()==KeyCode.ENTER||keyEvent.getCode()==KeyCode.ENTER){
+            rprPayment.createManualRipple().run();
+        }
     }
 
 
@@ -62,12 +71,12 @@ public class MenuFormAdminController {
 
     public void pnePayment_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
-            navigate("Edit Payment","/view/AdminPaymentForm.fxml");
+            navigate("Edit Payment","/view/PaymentForm.fxml");
         }
     }
 
     public void pnePayment_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        navigate("Edit Payment","/view/AdminPaymentForm.fxml");
+        navigate("Edit Payment","/view/PaymentForm.fxml");
     }
 
     public  void navigate(String title,String url) throws IOException {
