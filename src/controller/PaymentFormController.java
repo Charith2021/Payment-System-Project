@@ -87,4 +87,8 @@ public class PaymentFormController {
         homeStageRegular.setScene(homeSceneRegular);
         homeStageRegular.setTitle(title);
     }
+
+    public void btnPrint_OnAction(ActionEvent actionEvent) {
+        new Alert(Alert.AlertType.INFORMATION,"Printing",ButtonType.OK).show();
+    }
 }

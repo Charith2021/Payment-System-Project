@@ -44,7 +44,7 @@
       <Label layoutX="19.0" layoutY="490.0" text="Amount Received" />
       <Label layoutX="22.0" layoutY="541.0" text="Balance Amount" />
       <Label layoutX="6.0" layoutY="591.0" prefHeight="16.0" prefWidth="163.0" text="Due date of the balance amount" textOverrun="CLIP" />
-      <JFXButton layoutX="243.0" layoutY="662.0" text="Print Receipt" />
+      <JFXButton layoutX="243.0" layoutY="662.0" onAction="#btnPrint_OnAction" text="Print Receipt" />
       <JFXButton fx:id="btnHomeAdmin" layoutX="503.0" layoutY="23.0" onAction="#btnHomeAdmin_OnAction" text="Home" />
       <Label fx:id="lblUserName" layoutX="40.0" layoutY="28.0" text="label" />
       <JFXButton fx:id="btnHomeRegular" layoutX="503.0" layoutY="50.0" onAction="#btnHomeRegular_OnAction" text="Home" />
