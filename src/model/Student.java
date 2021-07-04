@@ -2,6 +2,8 @@ package model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Student implements Serializable {
     private String nic;
@@ -21,6 +23,17 @@ public class Student implements Serializable {
         this.dateOfBirth = dateOfBirth;
         this.contact = contact;
         this.email = email;
+    }
+
+    public static Student fromMap(String nic, Map<String, String> data) {
+        return new Student(
+                nic,
+                data.get("name"),
+                data.get("address"),
+                LocalDate.parse(data.get("dob")),
+                data.get("contact"),
+                data.get("email")
+        );
     }
 
     public String getNic() {
@@ -51,7 +64,7 @@ public class Student implements Serializable {
         return dateOfBirth;
     }
 
-    public void setdateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -71,6 +84,16 @@ public class Student implements Serializable {
         this.email = email;
     }
 
+    public Map<String, String> toMap() {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("name", fullName);
+        map.put("address", address);
+        map.put("dob", dateOfBirth + "");
+        map.put("contact", contact);
+        map.put("email", email);
+        return map;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -82,5 +105,4 @@ public class Student implements Serializable {
                 ", email='" + email + '\'' +
                 '}';
     }
-
 }

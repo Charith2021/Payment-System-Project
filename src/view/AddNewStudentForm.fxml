@@ -32,7 +32,8 @@
          </children>
       </VBox>
       <JFXButton layoutX="254.0" layoutY="473.0" onAction="#btnAddStudent_OnAction" text="Add Student" />
-      <JFXButton fx:id="btnHome" layoutX="503.0" layoutY="37.0" onAction="#btnHome_OnAction" text="Home" />
-      <Label fx:id="txtUserName" layoutX="36.0" layoutY="29.0" text="Regular User" />
+      <JFXButton fx:id="btnHomeRegular" layoutX="503.0" layoutY="37.0" onAction="#btnHomeRegular_OnAction" text="Home" />
+      <Label fx:id="lblOutput" layoutX="36.0" layoutY="29.0" text="label" />
+      <JFXButton fx:id="btnHomeAdmin" layoutX="503.0" layoutY="63.0" onAction="#btnHomeAdmin_OnAction" text="Home" />
    </children>
 </AnchorPane>

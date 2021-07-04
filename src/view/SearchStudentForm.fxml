@@ -31,7 +31,8 @@
             <TableColumn minWidth="0.0" prefWidth="114.0" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnHome" layoutX="541.0" layoutY="26.0" onAction="#btnHome_OnAction" text="Home" />
-      <Label layoutX="55.0" layoutY="32.0" text="Regular User" />
+      <JFXButton fx:id="btnAdminHome" layoutX="541.0" layoutY="26.0" onAction="#btnHomeAdmin_OnAction" text="Home" />
+      <Label fx:id="lblUserName" layoutX="55.0" layoutY="32.0" text="label" />
+      <JFXButton fx:id="btnRegularHome" layoutX="539.0" layoutY="57.0" onAction="#btnRegularHome_OnAction" text="Home" />
    </children>
 </AnchorPane>

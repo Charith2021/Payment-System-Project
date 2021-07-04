@@ -1,14 +1,17 @@
 package controller;
 
 import com.jfoenix.controls.JFXRippler;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.IOException;
 
@@ -20,6 +23,7 @@ public class MenuFormAdminController {
     public AnchorPane pneSearchStudents;
     public AnchorPane pneAddNewStudent;
     public AnchorPane pnePayment;
+    public  Label lblUserName;
 
     public void initialize(){
     rprAddNewStudent.setControl(pneAddNewStudent);
@@ -50,7 +54,7 @@ public class MenuFormAdminController {
 
 
     public void pneAddNewStudent_OnKeyReleased(KeyEvent keyEvent) throws IOException {
-        if(keyEvent.getCode()== KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
+        if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
             navigate("Add New Student", "/view/AddNewStudentForm.fxml");
         }
     }
@@ -71,21 +75,51 @@ public class MenuFormAdminController {
 
     public void pnePayment_OnKeyReleased(KeyEvent keyEvent) throws IOException {
         if(keyEvent.getCode()==KeyCode.ENTER || keyEvent.getCode()==KeyCode.SPACE){
-            navigate("Edit Payment","/view/PaymentForm.fxml");
+            navigate("Add Payment", "/view/PaymentForm.fxml");
         }
     }
 
     public void pnePayment_OnMouseClicked(MouseEvent mouseEvent) throws IOException {
-        navigate("Edit Payment","/view/PaymentForm.fxml");
+        navigate("Add Payment", "/view/PaymentForm.fxml");
     }
 
     public  void navigate(String title,String url) throws IOException {
-        Stage stage = (Stage) contextOfMenuFormAdmin.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource(url));
-        Scene addNewStudentScene=new Scene(root);
-        stage.setScene(addNewStudentScene);
-        stage.setTitle(title);
+
+        try {
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource(url));
+            Parent root = loader.load();
+
+            //The following both lines are the only addition we need to pass the arguments
+            if(title.equals("Add New Student")) {
+                AddNewStudentFormController controller2 = loader.getController();
+                controller2.setLabelText(lblUserName.getText());
+                controller2.hide();
+            }
+            if(title.equals("Search Student")){
+                SearchStudentFormController controller3 = loader.getController();
+                controller3.setLabelText(lblUserName.getText());
+                controller3.hide();
+            }if(title.equals("Add Payment")){
+                PaymentFormController controller4 = loader.getController();
+                controller4.setLabelText(lblUserName.getText());
+                controller4.hide();
+            }
+
+            Stage stage = (Stage) contextOfMenuFormAdmin.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-
+    public void btnChangeUser_OnAction(ActionEvent actionEvent) throws IOException {
+        Stage loginStage = (Stage) contextOfMenuFormAdmin.getScene().getWindow();
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/MainForm.fxml"));
+        Scene loginScene=new Scene(root);
+        loginStage.setScene(loginScene);
+        loginStage.show();
+    }
 }
