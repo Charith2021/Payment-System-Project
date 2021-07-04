@@ -15,6 +15,7 @@ import javafx.stage.Window;
 import model.Student;
 import model.StudentTM;
 import service.StudentService;
+import service.StudentServiceRedisImpl;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,27 +27,21 @@ public class SearchStudentFormController {
     public Label lblUserName;
     public JFXButton btnAdminHome;
     public JFXButton btnRegularHome;
+    private StudentServiceRedisImpl studentServiceRedis = new StudentServiceRedisImpl();
 
     public void initialize(){
         tblStudents.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("nic"));
         tblStudents.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("fullName"));
         tblStudents.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("address"));
         txtQuery.textProperty().addListener((observable, oldValue, newValue) -> loadAllStudents(newValue));
-        loadAllStudents(null);
+        loadAllStudents("");
     }
 
     private void loadAllStudents(String query) {
         tblStudents.getItems().clear();
 
-        List<Student> searchResult;
-        if(query == null || query.trim().isEmpty()){
-            searchResult = StudentService.findAllStudents();
-        }else{
-            searchResult = StudentService.findStudents(query);
-        }
-
-        for(Student student : searchResult){
-            tblStudents.getItems().add(new StudentTM(student.getNic(),student.getFullName(),student.getAddress()));
+        for (Student student : studentServiceRedis.findStudents(query)) {
+            tblStudents.getItems().add(new StudentTM(student.getNic(), student.getFullName(), student.getAddress()));
         }
     }
 
