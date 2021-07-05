@@ -17,7 +17,7 @@
       <Label layoutX="110.0" layoutY="134.0" text="User Name" />
       <Label layoutX="110.0" layoutY="191.0" text="Password" />
       <JFXTextField fx:id="txtUserName" layoutX="238.0" layoutY="116.0" prefHeight="26.0" prefWidth="188.0" />
-      <JFXButton layoutX="238.0" layoutY="255.0" onAction="#btnLoginOnAction" text="Login" />
+      <JFXButton layoutX="238.0" layoutY="255.0" onAction="#btnLoginOnAction" style="-fx-background-color: #A4929B;" text="Login" />
       <JFXPasswordField fx:id="txtPassword" layoutX="238.0" layoutY="186.0" prefHeight="26.0" prefWidth="188.0" />
    </children>
 </AnchorPane>

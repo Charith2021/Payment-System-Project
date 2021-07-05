@@ -31,9 +31,9 @@
             <JFXTextField fx:id="txtMail" layoutX="10.0" layoutY="114.0" prefHeight="26.0" prefWidth="485.0" promptText="E-mail" />
          </children>
       </VBox>
-      <JFXButton fx:id="btnSave" layoutX="254.0" layoutY="473.0" onAction="#btnAddStudent_OnAction" text="Add Student" />
-      <JFXButton fx:id="btnHomeRegular" layoutX="503.0" layoutY="37.0" onAction="#btnHomeRegular_OnAction" text="Home" />
+      <JFXButton fx:id="btnSave" layoutX="254.0" layoutY="473.0" onAction="#btnAddStudent_OnAction" style="-fx-background-color: #A4929B;" text="Add Student" />
+      <JFXButton fx:id="btnHomeRegular" layoutX="503.0" layoutY="37.0" onAction="#btnHomeRegular_OnAction" style="-fx-background-color: #A4929B;" text="Home" />
       <Label fx:id="lblOutput" layoutX="36.0" layoutY="29.0" text="label" />
-      <JFXButton fx:id="btnHomeAdmin" layoutX="503.0" layoutY="63.0" onAction="#btnHomeAdmin_OnAction" text="Home" />
+      <JFXButton fx:id="btnHomeAdmin" layoutX="503.0" layoutY="63.0" onAction="#btnHomeAdmin_OnAction" style="-fx-background-color: #A4929B;" text="Home" />
    </children>
 </AnchorPane>
