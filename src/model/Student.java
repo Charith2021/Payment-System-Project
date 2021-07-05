@@ -25,7 +25,7 @@ public class Student implements Serializable {
         this.email = email;
     }
 
-    public static Student fromMap(String nic, Map<String, String> data) {
+    public static Student fromMap(String nic, Map<String, String> data) {      //sends data out of the map
         return new Student(
                 nic,
                 data.get("name"),
@@ -84,7 +84,7 @@ public class Student implements Serializable {
         this.email = email;
     }
 
-    public Map<String, String> toMap() {
+    public Map<String, String> toMap() {               //send data into the map
         HashMap<String, String> map = new HashMap<>();
         map.put("name", fullName);
         map.put("address", address);

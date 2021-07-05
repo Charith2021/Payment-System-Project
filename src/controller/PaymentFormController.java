@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import model.Student;
 import service.StudentService;
+import service.StudentServiceRedisImpl;
 
 import java.io.IOException;
 
@@ -35,6 +37,8 @@ public class PaymentFormController {
     public JFXTextField txtNic;
     public JFXTextField txtFullName;
 
+    private StudentServiceRedisImpl studentServiceRedis = new StudentServiceRedisImpl();
+
     ObservableList<String> olName=FXCollections.observableArrayList("Graduate Diploma in Software Engineering","CMJD","Direct Entry Program");
     ObservableList<String> olId=FXCollections.observableArrayList("GDSE","CMJD","DEP");
 
@@ -44,13 +48,29 @@ public class PaymentFormController {
         cheCourse.setValue("Graduate Diploma in Software Engineering");
         cheID.setValue("GDSE");
 
+        cheCourse.valueProperty().addListener((observable, oldValue, newValue) -> {
+            if(cheCourse.getValue() == "Graduate Diploma in Software Engineering"){
+                cheID.setValue("GDSE");
+            }
+
+            if(cheCourse.getValue() == "CMJD"){
+                cheID.setValue("CMJD");
+            }
+
+            if(cheCourse.getValue() == "Direct Entry Program"){
+                cheID.setValue("DEP");
+            }
+        });
+
         txtNic.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if (txtNic.getLength() == 10){
-                    txtNic.setText(txtNic.getText());
-                    txtNic.setEditable(false);
-                    txtFullName.setText("Working");
+                  String nic = txtNic.getText();
+                if (txtNic.getLength() == 10 ){
+                   txtNic.setText(nic);
+                   txtNic.setEditable(false);
+                    System.out.println("Working");
+
                 }
             }
         });

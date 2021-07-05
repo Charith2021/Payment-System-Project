@@ -15,6 +15,7 @@ public class StudentServiceRedisImpl {
     private final Jedis client;
 
     public StudentServiceRedisImpl() {
+
         client = JedisClient.getInstance().getClient();
     }
 
@@ -45,7 +46,7 @@ public class StudentServiceRedisImpl {
         client.del(nic);
     }
 
-    private boolean exitsStudent(String nic) {
+    private boolean existsStudent(String nic) {
         return client.exists(nic);
     }
 
