@@ -36,6 +36,7 @@ public class PaymentFormController {
     public JFXButton btnHomeRegular;
     public JFXTextField txtNic;
     public JFXTextField txtFullName;
+    public JFXTextField txtFees;
 
     private StudentServiceRedisImpl studentServiceRedis = new StudentServiceRedisImpl();
 
@@ -51,14 +52,37 @@ public class PaymentFormController {
         cheCourse.valueProperty().addListener((observable, oldValue, newValue) -> {
             if(cheCourse.getValue() == "Graduate Diploma in Software Engineering"){
                 cheID.setValue("GDSE");
+               if(lblUserName.getText().equals("Admin")) {
+                   txtFees.setText("Rs 200000");
+               }
+                if(lblUserName.getText().equals("Regular User")) {
+                    txtFees.setText("Rs 200000");
+                    txtFees.setEditable(false);
+                }
+
             }
 
             if(cheCourse.getValue() == "CMJD"){
                 cheID.setValue("CMJD");
+                if(lblUserName.getText().equals("Admin")) {
+                    txtFees.setText("Rs 50000");
+                }
+                if(lblUserName.getText().equals("Regular User")) {
+                    txtFees.setText("Rs 50000");
+                    txtFees.setEditable(false);
+                }
+
             }
 
             if(cheCourse.getValue() == "Direct Entry Program"){
                 cheID.setValue("DEP");
+                if(lblUserName.getText().equals("Admin")) {
+                    txtFees.setText("Rs 100000");
+                }
+                if(lblUserName.getText().equals("Regular User")) {
+                    txtFees.setText("Rs 100000");
+                    txtFees.setEditable(false);
+                }
             }
         });
 

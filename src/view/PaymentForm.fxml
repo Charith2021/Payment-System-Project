@@ -34,7 +34,7 @@
       <JFXDatePicker layoutX="209.0" layoutY="370.0" />
       <VBox layoutX="186.0" layoutY="438.0" prefHeight="206.0" prefWidth="379.0" spacing="20.0">
          <children>
-            <JFXTextField />
+            <JFXTextField fx:id="txtFees" />
             <JFXTextField />
             <JFXTextField />
             <JFXTextField />
